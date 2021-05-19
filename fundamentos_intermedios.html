@@ -12,16 +12,16 @@
     <script>
         // Sigma - Implementa una función sigma(num) que, dado un número, devuelve la suma de todos los enteros positivos (incluyendo el número dado). Ej: sigma(3) = 6 (1+2+3); sigma(5) = 15 (1+2+3+4+5).
 
-        function sigma(num){
+        function sigma(num) {
             let suma = 0;
-            if (0 < num){
-                for (let i=0; i<num; i++){
+            if (0 < num) {
+                for (let i = 0; i < num; i++) {
                     suma = suma + i;
                 }
-        }
-        suma = suma + num;
-        console.log(suma);
-        return suma;
+            }
+            suma = suma + num;
+            console.log(suma);
+            return suma;
         }
         sigma(3)
 
@@ -30,16 +30,16 @@
 
         // Factorial - Escribe una función factorial(num) que, dado un número, devuelva el producto (multiplicación) de todos los enteros positivos (incluyendo el número dado). Por ejemplo: factorial(3) = 6 (1*2*3); factorial(5) = 120 (1*2*3*4*5).
 
-        function factorial(num){
+        function factorial(num) {
             let multiplicación = 1;
-            if (0 < num){
-                for (let i=1; i<num; i++){
+            if (0 < num) {
+                for (let i = 1; i < num; i++) {
                     multiplicación = multiplicación * i;
                 }
-        }
-        multiplicación = multiplicación * num;
-        console.log(multiplicación);
-        return multiplicación;
+            }
+            multiplicación = multiplicación * num;
+            console.log(multiplicación);
+            return multiplicación;
         }
         factorial(5)
 
@@ -74,41 +74,36 @@
             console.log(a);
             return (a);
         }
-        nultimo([5,2,3,6,4,9,7],3)
+        nultimo([5, 2, 3, 6, 4, 9, 7], 3)
 
         // Array: Segundo más grande: Devuelve el segundo elemento más grande de un array. Dado [42,1,4,3.14,7], devuelve 7.  Si el array es muy pequeño, devuelve null.
 
-        function segundo(arr){
-        let mayor = arr[0];
-        let mayor_pos = 0;
-        for (let i=0; i<arr.length; i++) {
-            if (arr[i] > mayor) {
-                mayor = arr[i];
-                mayor_pos = i;
+        function segundo(arr) {
+            let mayor = arr[0];
+            let mayor_pos = 0;
+            let sec = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > mayor) {
+                    mayor = arr[i];
+                    mayor_pos = i;
+                }
             }
-        }
-        console.log(mayor);
-        let segundo = arr[1]
-        let seg_pos = 1
-        for (let i=1; i<arr.length; i++) {
-            if (arr[i] > segundo) {
-                segundo = arr[i];
-                seg_pos = i;
+            for (let a = 1; a < arr.length; a++) {
+                if (arr[a] < mayor && arr[a] > sec) {
+                    sec = arr[a];
+                }
+                console.log(sec)
             }
+            console.log(mayor);
+            return (sec);
         }
-        let final = 0;
-        if (mayor>segundo) {
-            console.log(segundo);
-        }
-        return (segundo);
-    }
-        segundo([4,1,4,3.14,7])
+        segundo([4, 1, 41, 3.14, 7])
 
         // Doble Problema Par: Crea una función que cambie un array dado duplicando cada uno de sus elementos en una posición par, y manteniendo el orden original. Convierte [4, "Ulysses", 42, false]   a    [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
 
         function duplicar(arr) {
             let a = [];
-            for (let i=0; i<arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 a.push(arr[i]);
                 a.push(arr[i]);
             }
