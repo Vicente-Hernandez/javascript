@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Ninja - Gato</title>
+</head>
+
+<body>
+    <div id="container" class="bg-image p-5 text-center shadow-1-strong rounded" style="background-image: url('https://judo-jujitsu.fr/wp-content/uploads/2014/12/cropped-Dojo-HD-Desktop-Wallpaper-1140x595.jpg');">
+        <div>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1">Ninja >> Gato</span>
+                </div>
+            </nav>
+        </div>
+        <div class="mt-4 ">
+            <img class="col-3 img-fluid" src='.\img\ninja0.png'
+                data-alt-src='.\img\cat0.png' />
+        </div>
+        <div>
+            <img class="col-3 img-fluid" src='.\img\ninja1.png'
+                data-alt-src='.\img\cat1.png' />
+        </div>
+        <div>
+            <img class="col-3 img-fluid" src='.\img\ninja2.png'
+                data-alt-src='.\img\cat2.png' />
+        </div>
+        <div>
+            <img class="col-3 img-fluid" src='.\img\ninja3.png'
+                data-alt-src='.\img\cat3.png' />
+        </div>
+        <div>
+            <img class="col-3 img-fluid" src='.\img\ninja4.png'
+                data-alt-src='.\img\cat4.png' />
+        </div>
+    </div>
+</body>
+<script>
+    $('img').on("click", function () {
+        console.log('click');
+        const ninja = $(this).attr('src');
+        const gato = $(this).attr('data-alt-src');
+        $(this).attr('src', gato);
+        $(this).attr('data-alt-src', ninja);
+    })
+</script>
+
+</html>
