@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Funciones básicas de J-Query</title>
+    <style>
+        #showb {
+            display: none;
+        }
+        .x {
+            bg-light;
+        }
+        .x1 {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/jquery-225998.png" alt="" width="200"
+                        height="150">
+                </a>
+            </div>
+        </nav>
+        <h1 class="text-center">Funciones de J-Query</h1>
+        <div class="row">
+            <div class="col-1">
+                <div class="row">
+                    <button type="col-12 button" class="my-3 btn btn-primary rounded-pill" id="hide">Hide!</button>
+                    <button type="col-12 button" class="my-3 btn btn-secondary rounded-pill" id="show">Show!</button>
+                    <button type="col-12 button" class="my-3 btn btn-success rounded-pill" id="hstoggle">Toggle</button>
+                </div>
+            </div>
+            <div class="col-11">
+                <h1 class="p-3 my-2 bg-warning text-white text-center hideb">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Unde dolorum placeat provident rerum nulla distinctio officiis molestias repellat
+                    voluptate suscipit qui aliquid dolore consequatur quos, vitae voluptas quod praesentium veritatis!
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <div class="row">
+                    <button type="col-12 button" class="my-3 btn btn-secondary rounded-pill" id="sU">SlideUp!</button>
+                    <button type="col-12 button" class="my-3 btn btn-primary rounded-pill" id="sD">SlideDown!</button>
+                    <button type="col-12 button" class="my-3 btn btn-success rounded-pill" id="stoggle">SToggle</button>
+                </div>
+            </div>
+            <div class="col-11">
+                <h1 class="p-3 my-2 bg-info text-white text-center" id="slide">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Unde dolorum placeat provident rerum nulla distinctio officiis molestias repellat
+                    voluptate suscipit qui aliquid dolore consequatur quos, vitae voluptas quod praesentium veritatis!
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <div class="row">
+                    <button type="col-12 button" class="my-3 btn btn-primary rounded-pill" id="FO">FadeOut!</button>
+                    <button type="col-12 button" class="my-3 btn btn-secondary rounded-pill" id="FI">FadeIn!</button>
+                </div>
+            </div>
+            <div class="col-11">
+                <h1 class="p-3 my-2 bg-info text-white text-center" id="fade">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Unde dolorum placeat provident rerum nulla distinctio officiis molestias repellat
+                    voluptate suscipit qui aliquid dolore consequatur quos, vitae voluptas quod praesentium veritatis!
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <div class="row">
+                    <button type="col-12 button" class="my-3 btn btn-secondary rounded-pill" id="add">addClass!</button>
+                    <button type="col-12 button" class="my-3 btn btn-primary rounded-pill" id="before">before!</button>
+                    <button type="col-12 button" class="my-3 btn btn-success rounded-pill" id="after">after!</button>
+                </div>
+            </div>
+            <div class="col-11">
+                <h1 class="p-3 my-2 bg-info text-center" id="nn">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Unde dolorum placeat provident rerum nulla distinctio officiis molestias repellat
+                    voluptate suscipit qui aliquid dolore consequatur quos, vitae voluptas quod praesentium veritatis!
+                </h1>
+            </div>
+        </div>
+        <script>
+            $('#hide').on("click", function () {
+                $('.hideb').hide();
+            })
+            $('#show').on("click", function () {
+                $('.hideb').show();
+            })
+            $('#hstoggle').on("click", function () {
+                $('.hideb').toggle();
+            })
+
+            $('#sD').on("click", function () {
+                $('#slide').slideDown();
+            })
+            $('#sU').on("click", function () {
+                $('#slide').slideUp();
+            })
+            $('#stoggle').on("click", function () {
+                $('#slide').slideToggle();
+            })
+
+            $('#FI').on("click", function () {
+                $('#fade').fadeIn();
+            })
+            $('#FO').on("click", function () {
+                $('#fade').fadeOut();
+            })
+
+            $('#add').on("click", function () {
+                $('#nn').addClass( [".x", ".x1"] );
+            })
+            $('#before').on("click", function () {
+                $('#nn').before("ANTES");
+            })
+            $('#after').on("click", function () {
+                $('#nn').after("DESPUÉS!");
+            })
+        </script>
+    </div>
+</body>
+
+</html>
